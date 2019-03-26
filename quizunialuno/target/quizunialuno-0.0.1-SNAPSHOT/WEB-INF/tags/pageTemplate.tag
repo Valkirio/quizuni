@@ -30,7 +30,7 @@
 	    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 	  	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons"  />
 	  		   	   
-	    <link rel="stylesheet" href="${matCSS}materialize.min.css">
+	    <link rel="stylesheet" href="${matCSS}materialize.css">
 	   
            
 </head>
@@ -40,14 +40,12 @@
 	<%@include file="/WEB-INF/views/header.jsp" %>
 	
 	<jsp:doBody />
-	
-	<%@include file="/WEB-INF/views/footer.jsp" %>	
-	
+		
 	<jsp:invoke fragment="extraScripts"/>
 	
 	<!--   Core JS Files   -->
-    <script src="${matJS}materialize.min.js"></script>
-    <script type="text/javascript" src="${js}jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="${js}jquery-2.1.1.min.js"></script>
+    <script src="${matJS}materialize.min.js"></script>    
 	<script type="text/javascript" src="${js}main.js" ></script>  
 		
 </body>

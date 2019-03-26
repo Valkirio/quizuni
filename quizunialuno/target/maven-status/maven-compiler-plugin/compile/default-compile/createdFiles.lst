@@ -1,5 +1,9 @@
-br\com\quiz\config\AppWebConfiguration.class
 br\com\quiz\config\ServletSpringMVC.class
 br\com\quiz\config\XmlViewResolver.class
 br\com\quiz\controller\HomeController.class
+br\com\quiz\config\AppWebConfiguration.class
+br\com\quiz\controller\QuestoesController.class
+br\com\quiz\dao\QuestoesDao.class
+br\com\quiz\validator\QuestoesValidation.class
+br\com\quiz\model\Questoes.class
 br\com\quiz\config\JPAConfiguration.class
