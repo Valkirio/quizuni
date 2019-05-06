@@ -7,7 +7,7 @@
 
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
-  <li><a href="${s:mvcUrl('QC#form').build()}">Cadastro Pergunta</a></li>  
+  <li><a href="/quizunialuno/question/create">Cadastro Pergunta</a></li>  
   <li class="divider"></li>
   <li><a href="${s:mvcUrl('QC#list').build()}">Lista de Perguntas</a></li>
   <li><a href="#!">Rating</a></li>
@@ -18,7 +18,9 @@
     <ul class="right hide-on-med-and-down">
       <li><a href="${s:mvcUrl('HC#index').build()}">Home</a></li>      
       <!-- Dropdown Trigger -->
-      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Administração<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li>
+      	<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Administração<i class="material-icons right">arrow_drop_down</i></a></li>
+      </li>
     </ul>
   </div>
 </nav>
