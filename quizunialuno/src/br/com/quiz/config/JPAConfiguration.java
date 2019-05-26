@@ -27,7 +27,7 @@ public class JPAConfiguration {
 		dataSource.setDriverClass("com.mysql.jdbc.Driver");		
 		dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/db_quizunialuno");
 		dataSource.setUser("root");
-		dataSource.setPassword("developer");		
+		dataSource.setPassword("");		
 		
 		dataSource.setMinPoolSize(5);		
 		dataSource.setMaxPoolSize(500);		

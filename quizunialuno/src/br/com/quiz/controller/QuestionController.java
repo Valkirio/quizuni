@@ -65,4 +65,11 @@ public class QuestionController {
 		}
 		
 	}
+	
+	@GetMapping("/list-all")
+	public ModelAndView listAll() {
+		ModelAndView model = new ModelAndView("questoes/list");
+		model.addObject("listaDeQuestoes", dao.findAll());
+		return model;
+	}
 }

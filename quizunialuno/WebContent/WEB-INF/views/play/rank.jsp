@@ -5,20 +5,36 @@
 
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
 
-<tags:pageTemplate titulo="Cadastro de Questões" bodyClass="blue-grey lighten-5">	
+<tags:pageTemplate titulo="Cadastro de Questões" bodyClass="blue-grey lighten-5" origem="ROLE_CLI">	
 
-<div class="row">
-	<div class="col s10 push-s1">
+<div class="container">
 	
-		<ul>
-			<c:forEach var="r" items="${ rank }" varStatus="idx">
-				<li>${ idx.index + 1 } - ${ r.name } - ${ r.email } - ${ r.score } </li>
-			</c:forEach>
-		</ul>
+	<div class="col s12">
+		<div class="row">	
+	
+		<table class="table striped bordered responsive-table">
+			<thead>
+	          <tr>
+	              <th>ID</th>
+	              <th>JOGADOR</th>
+	              <th>E-MAIL</th>
+	              <th>PONTUA&Ccedil;&Atilde;O</th>
+	          </tr>
+	        </thead>
+	        <tbody>
+	        <c:forEach var="r" items="${ rank }" varStatus="idx">
+	          <tr>
+	            <td>${ idx.index + 1 }</td>
+	            <td>${ r.name }</td>
+	            <td>${ r.email }</td>
+	            <td>${ r.score }</td>
+	          </tr>
+	        </c:forEach>
+	        </tbody>		
+		</table>
 		
-		<a class="btn waves-effect light" href="/quizunialuno/index">Jogar outra partida</a>
+		</div>
 	</div>
 </div>
-
 
 </tags:pageTemplate>

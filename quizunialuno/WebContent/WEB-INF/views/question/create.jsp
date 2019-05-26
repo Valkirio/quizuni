@@ -5,7 +5,7 @@
 
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
 
-<tags:pageTemplate titulo="Cadastro de Questões" bodyClass="blue-grey lighten-5">	
+<tags:pageTemplate titulo="Cadastro de Questões" bodyClass="blue-grey lighten-5" origem="ROLE_ADM">	
 
 	<div class="container">
 		<h4 class="main-title center">CADASTRO DE QUESTÕES</h4>

@@ -30,7 +30,7 @@
 	    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 	  	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons"  />
 	  		   	   
-	    <link rel="stylesheet" href="${matCSS}materialize.css">
+	    <link rel="stylesheet" href="${matCSS}materialize.min.css">
 	   
            
 </head>
@@ -46,6 +46,7 @@
 	<!--   Core JS Files   -->
 	<script type="text/javascript" src="${js}jquery-2.1.1.min.js"></script>
     <script src="${matJS}materialize.min.js"></script>    
-	<script type="text/javascript" src="${js}main.js" ></script>  
-		
+	<script type="text/javascript" src="${js}main.js" ></script>
+
 </body>
+</html>

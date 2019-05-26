@@ -2,14 +2,14 @@ use db_quizunialuno;
 # Tabela de questoes
 create table TB_QUESTION (
 	ID bigint primary key not null auto_increment,
-    DESCRIPTION varchar(255) not null,
+    DESCRIPTION varchar(3000) not null,
     ACTIVE boolean
 );
 
 # Tabela de alternativas
 create table TB_ALTERNATIVE (
 	ID bigint primary key not null auto_increment,
-    DESCRIPTION varchar(255) not null,
+    DESCRIPTION varchar(3000) not null,
     CORRECT boolean,
     IDQUESTION bigint,
     constraint fk_question foreign key (IDQUESTION) references TB_QUESTION (ID)
