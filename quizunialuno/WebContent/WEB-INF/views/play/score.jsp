@@ -6,11 +6,22 @@
 <%@ taglib tagdir="/WEB-INF/tags" prefix="tags"%>
 
 
-<tags:pageTemplate titulo="Cadastro de Questões" bodyClass="blue-grey lighten-5">	
+<tags:pageTemplate titulo="Cadastro de Questões" bodyClass="blue-grey lighten-5" origem="ROLE_CLI">
 
-<h1 class="center">Parabéns ${ player.name }</h1>
-<h2 class="center">Pontuação final<br />${ score }</h2>
-
-<a class="btn waves-effect light" href="/quizunialuno/play">Ver Ranking</a>
+<div class="container" style=" margin-top: 100px;">
+	<div class="row">	
+        <div class="col s12 m7">
+          <div class="card-content">
+                    
+            <span class="card-title flow-text center"><i class="medium material-icons prefix">stars</i> Parabéns ${ player.name }</span>
+           
+            <div class="card-content">
+              <p class="flow-text left">Pontua&ccedil;&atilde;o final ${score} ponto(s)</p>
+            </div>
+           
+          </div>
+        </div>
+    </div>
+</div>
 
 </tags:pageTemplate>

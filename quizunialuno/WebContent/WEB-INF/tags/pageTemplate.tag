@@ -2,12 +2,14 @@
 
 <%@ attribute name="titulo" required="true" %>
 <%@ attribute name="bodyClass" required="false" %>
+<%@ attribute name="origem" required="false" %>
 <%@ attribute name="extraScripts" fragment="true" %>
 
 <c:url value="/resources/img/" var="img" />
 <c:url value="/resources/js/" var="js" />
 <c:url value="/resources/materialize/js/" var="matJS" />
 <c:url value="/resources/materialize/css/" var="matCSS" />
+<c:url value="/resources/css/" var="css" />
 
 <!DOCTYPE html>
 <html>
@@ -31,13 +33,19 @@
 	  	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/icon?family=Material+Icons"  />
 	  		   	   
 	    <link rel="stylesheet" href="${matCSS}materialize.min.css">
-	   
+	    <link rel="stylesheet" href="${css}quizstyle.css">
            
 </head>
 		
-<body class="${bodyClass}" >	
+<body class="${bodyClass}" id="${origem}" >	
+	
+	<c:if test="${origem eq 'ROLE_ADM' }">
+		<%@include file="/WEB-INF/views/header_adm.jsp" %>
+	</c:if>
 
-	<%@include file="/WEB-INF/views/header.jsp" %>
+	<c:if test="${origem eq 'ROLE_CLI' }">
+		<%@include file="/WEB-INF/views/header.jsp" %>
+	</c:if>
 	
 	<jsp:doBody />
 		
