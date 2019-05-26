@@ -5,20 +5,15 @@
 
 <c:url value="/resources/img/" var="img" />
 
-<!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="${s:mvcUrl('QC#form').build()}">Cadastro Pergunta</a></li>  
-  <li class="divider"></li>
-  <li><a href="${s:mvcUrl('QC#list').build()}">Lista de Perguntas</a></li>
-  <li><a href="#!">Rating</a></li>
-</ul>
 <nav>
   <div class="nav-wrapper teal darken-3">
     <a href="${s:mvcUrl('HC#index').build()}" class="brand-logo"><i class="material-icons">grid_off</i>QuizUniAluno</a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="${s:mvcUrl('HC#index').build()}">Home</a></li>      
-      <!-- Dropdown Trigger -->
-      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Administração<i class="material-icons right">arrow_drop_down</i></a></li>
+    <ul class="right hide-on-med-and-down">       
+      <li><a href="/quizunialuno/index">Nova Partida</a></li>
+      <li><a href="/quizunialuno/play">Rating</a></li>    
     </ul>
   </div>
 </nav>
+<c:if test="${player.name != '' && player.name != null}">
+	<span class="new badge left" data-badge-caption="${player.name}">Jogador:</span>
+</c:if>

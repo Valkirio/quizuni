@@ -1,9 +1,9 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
 	$(".dropdown-trigger").dropdown({hover: true});
 		
 	$('select').formSelect();
 	
-	verificaCheckbox();
+	//verificaCheckbox();
 			
 });
 
@@ -113,3 +113,25 @@ function verificaCheckbox(){
 	}
 	
 }
+*/
+  $(document).ready(function(){
+	  $(".dropdown-button").dropdown();
+  });
+  
+ 
+window.onload = () => {
+    
+	var checkbox = document.querySelectorAll('.rs');
+	
+	checkbox.forEach(c => c.addEventListener('click', () => {
+		var group = c.getAttribute('data-group')
+		checkbox.forEach(x => {
+			if(x.getAttribute('data-group') == group){
+				x.checked = false;
+			}	
+		});
+		c.checked = true;
+	}))
+}
+
+
